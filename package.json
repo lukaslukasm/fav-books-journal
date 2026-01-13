@@ -1,8 +1,20 @@
 {
-	"name": "nmh-assignment",
-	"private": true,
+	"name": "fav-books-journal",
 	"version": "0.0.0",
+	"private": true,
+	"description": "Simple SPA favourite books keeper. Allows for books listing, filtering by name and adding new books to the list.",
+	"homepage": "https://github.com/lukaslukasm/fav-books-journal#readme",
+	"bugs": {
+		"url": "https://github.com/lukaslukasm/fav-books-journal/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lukaslukasm/fav-books-journal.git"
+	},
+	"license": "ISC",
+	"author": "Lukas Mikula",
 	"type": "module",
+	"main": "index.html",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
