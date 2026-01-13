@@ -20,9 +20,10 @@ and adding new books to the list.
 
 ## Features
 
-- [ ] List all your favourite books
-- [ ] Filter them by name
-- [ ] Add new books
+- Supports a wide variety of screen sizes
+- List all your favourite books
+- Filter them by name
+- Add new books
 
 ## Tech stack
 
@@ -31,4 +32,3 @@ and adding new books to the list.
 - Typescript
 - Sass
 - Material UI
--
