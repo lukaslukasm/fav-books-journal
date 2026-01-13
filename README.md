@@ -30,5 +30,6 @@ and adding new books to the list.
 - Vite
 - React
 - Typescript
+- Redux
 - Sass
 - Material UI
