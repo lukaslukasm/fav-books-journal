@@ -1,0 +1,39 @@
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	font-family: Roboto, 'Helvetica Neue', arial, sans-serif;
+}
+
+#root {
+	width: 100vw;
+}
+
+body {
+	@include flex-center;
+	flex-direction: column;
+
+	min-height: 100svh;
+}
+
+.app {
+	@include flex-center;
+	flex-direction: column;
+	width: 100%;
+
+	.heading {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+
+	.main-container {
+		padding: 1rem;
+		width: min(1000px, calc(100% - 1rem));
+		border-radius: 1rem;
+		border: 1px solid gray;
+		flex-wrap: wrap;
+	}
+}
