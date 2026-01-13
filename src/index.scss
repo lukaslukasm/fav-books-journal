@@ -15,7 +15,6 @@
 body {
 	@include flex-center;
 	flex-direction: column;
-
 	min-height: 100svh;
 }
 
@@ -23,10 +22,13 @@ body {
 	@include flex-center;
 	flex-direction: column;
 	width: 100%;
+	gap: 1rem;
 
-	.heading {
-		font-size: 2rem;
+	.main-heading {
+		font-size: min(2rem, 8vw);
 		font-weight: 700;
+		margin: 0 0.5rem;
+		display: block;
 	}
 
 	.main-container {
@@ -34,6 +36,6 @@ body {
 		width: min(1000px, calc(100% - 1rem));
 		border-radius: 1rem;
 		border: 1px solid gray;
-		flex-wrap: wrap;
+		flex-wrap: wrap-reverse;
 	}
 }
