@@ -5,7 +5,7 @@ type BookCardProps = {
 };
 
 /**
- * Renders a card showing shorten book info. Opens modal on click with a full info.
+ * Renders a card showing a brief book info. On click opens modal with a full info.
  *
  */
 

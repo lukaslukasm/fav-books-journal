@@ -1,23 +1,26 @@
 @use './mixins' as mixins;
+@use './variables' as vars;
 
 * {
 	font-family: Roboto, 'Helvetica Neue', arial, sans-serif;
+	color: vars.$color-text-high;
 }
 
 #root {
-	width: 100vw;
+	max-width: 100vw;
+	width: 100%;
 }
 
 body {
 	@include mixins.flex-center;
 	flex-direction: column;
+	background-color: vars.$color-bg-main;
 	min-height: 100svh;
 }
 
 .app {
 	@include mixins.flex-center;
 	flex-direction: column;
-	width: 100%;
 	gap: 1rem;
 
 	.main-heading {
@@ -31,8 +34,9 @@ body {
 		@include mixins.flex-center;
 		padding: 1rem;
 		width: min(1000px, calc(100% - 1rem));
-		border-radius: 1rem;
-		border: 1px solid gray;
+		border-radius: vars.$radius-lg;
+		border: 1px solid vars.$color-border;
 		flex-wrap: wrap-reverse;
+		background-color: vars.$color-bg-surface;
 	}
 }
