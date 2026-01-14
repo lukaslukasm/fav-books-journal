@@ -18,6 +18,10 @@ function App() {
 				<main className='app'>
 					<h1 className='main-heading'>Favourite Books Journal</h1>
 					<div className='main-container'>
+						<div
+							className=''
+							style={{ flexGrow: 1 }}
+						></div>
 						<BookList />
 					</div>
 				</main>
