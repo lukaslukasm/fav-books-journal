@@ -1,13 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import mockBooks from '../../../mock-data/books.json';
-
-type Book = {
-	id: string;
-	name: string;
-	author?: string;
-	imagePath?: string;
-	description?: string;
-};
+import mockBooks from '@/mock-data/books.json';
+import { type Book } from '@/src/types/types';
 
 const booksSlice = createSlice({
 	name: 'books',
