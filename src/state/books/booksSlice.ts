@@ -2,6 +2,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import mockBooks from '../../../mock-data/books.json';
 
 type Book = {
+	id: string;
 	name: string;
 	author?: string;
 	imagePath?: string;
