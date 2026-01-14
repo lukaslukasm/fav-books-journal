@@ -59,10 +59,10 @@ body {
 	.main-container {
 		@include mixins.flex-center;
 		padding: 1rem;
-		width: min(1000px, calc(100% - 1rem));
+		width: min(64rem, calc(100% - 1rem));
 		border-radius: vars.$radius-lg;
 		border: 1px solid vars.$color-border;
-		flex-wrap: wrap-reverse;
+		flex-wrap: wrap;
 		background-color: vars.$color-bg-surface;
 	}
 }
