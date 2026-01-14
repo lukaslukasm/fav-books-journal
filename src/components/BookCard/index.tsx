@@ -1,4 +1,5 @@
 import type { Book } from '@/src/types/types';
+import './style.scss';
 
 type BookCardProps = {
 	book: Book;
