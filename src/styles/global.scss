@@ -1,8 +1,4 @@
-@mixin flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+@use './mixins' as mixins;
 
 * {
 	font-family: Roboto, 'Helvetica Neue', arial, sans-serif;
@@ -13,13 +9,13 @@
 }
 
 body {
-	@include flex-center;
+	@include mixins.flex-center;
 	flex-direction: column;
 	min-height: 100svh;
 }
 
 .app {
-	@include flex-center;
+	@include mixins.flex-center;
 	flex-direction: column;
 	width: 100%;
 	gap: 1rem;
@@ -32,6 +28,7 @@ body {
 	}
 
 	.main-container {
+		@include mixins.flex-center;
 		padding: 1rem;
 		width: min(1000px, calc(100% - 1rem));
 		border-radius: 1rem;
