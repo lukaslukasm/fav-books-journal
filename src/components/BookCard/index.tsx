@@ -25,7 +25,10 @@ export default function BookCard({ book }: BookCardProps) {
 			<div className='card-content'>
 				<h3>{book.name}</h3>
 				<p>{book.description}</p>
-				<span className='btn secondary'>More</span>
+				<div className='sub-section'>
+					<span className='author-name'>{book.author}</span>
+					<span className='btn secondary'>More</span>
+				</div>
 			</div>
 		</button>
 	);

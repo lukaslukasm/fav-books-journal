@@ -41,9 +41,15 @@
 			-webkit-line-clamp: 2;
 		}
 
-		.btn {
-			margin-top: 0.5rem;
-			align-self: flex-end;
+		.sub-section {
+			@include mixins.flex-center;
+			margin-top: 0.2rem;
+			width: 100%;
+			justify-content: space-between;
+
+			.author-name {
+				color: vars.$color-text-med;
+			}
 		}
 	}
 }
