@@ -11,5 +11,22 @@ type BookCardProps = {
  */
 
 export default function BookCard({ book }: BookCardProps) {
-	return <div className='book-card'></div>;
+	return (
+		<button
+			onClick={() => console.log('wee')}
+			className='book-card'
+		>
+			<div className='img-wrap'>
+				<img
+					src={book.imagePath}
+					alt={book.name + ' cover'}
+				/>
+			</div>
+			<div className='card-content'>
+				<h3>{book.name}</h3>
+				<p>{book.description}</p>
+				<span className='btn secondary'>More</span>
+			</div>
+		</button>
+	);
 }
