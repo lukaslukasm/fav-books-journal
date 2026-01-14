@@ -32,4 +32,17 @@ and adding new books to the list.
 - Typescript
 - Redux
 - Sass
-- Material UI
+- ~~Material UI~~
+
+## Some of the decisions
+
+- **Drop the Material UI.** It does not offer elements good enough to accomodate
+  both desktop and mobile view of unlimited number of books.
+- **The List of books needs to handle unlimited number of books.** Solution:
+  - `react-window` for rendering only the elements in the viewport
+  - scroll to top button on the mobile devices to reach the filter comfortably
+    from any point of scroll
+  - `useTransition()` hook on the filter to prevent lagging during the setting
+    of the filter
+  - fine-tuned book card appearance on the mobile to show a greater number of
+    books per viewport
