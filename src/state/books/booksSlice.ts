@@ -1,5 +1,4 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import mockBooks from "@/mock-data/books.json";
 import { type Book } from "@/src/types/types";
 import getFakeBooks from "@/src/utils/getFakeBooks";
 
