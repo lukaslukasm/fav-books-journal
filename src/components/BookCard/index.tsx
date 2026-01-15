@@ -13,7 +13,7 @@ import BookCardExpanded from "./BookCardExpanded";
 export default function BookCard({ book }: BookCardProps) {
   return (
     <Dialog.Root>
-      <Dialog.Trigger>
+      <Dialog.Trigger style={{ width: "100%" }}>
         <BookCardFace book={book} />
       </Dialog.Trigger>
       <Dialog.Portal>
