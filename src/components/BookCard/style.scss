@@ -1,130 +1,130 @@
-@use '@/src/styles/mixins' as mixins;
-@use '@/src/styles/variables' as vars;
+@use "@/src/styles/mixins" as mixins;
+@use "@/src/styles/variables" as vars;
 
 @keyframes contentShow {
-	from {
-		opacity: 0;
-		transform: translate(-50%, -48%) scale(0.96);
-	}
-	to {
-		opacity: 1;
-		transform: translate(-50%, -50%) scale(1);
-	}
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 @keyframes overlayShow {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .book-card-face {
-	@include mixins.flex-center;
-	gap: 1rem;
-	cursor: pointer;
-	padding: 1rem;
-	border-radius: vars.$radius-md;
-	background-color: vars.$color-bg-input;
+  @include mixins.flex-center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: vars.$radius-md;
+  background-color: vars.$color-bg-input;
 
-	&:hover {
-		background-color: vars.$color-bg-input-hover;
-	}
+  &:hover {
+    background-color: vars.$color-bg-input-hover;
+  }
 
-	.img-wrap {
-		max-width: 6rem;
-		width: 100%;
-		height: 8rem;
-		display: flex;
+  .img-wrap {
+    max-width: 6rem;
+    width: 100%;
+    height: 8rem;
+    display: flex;
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
-	}
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-		h3 {
-			text-align: left;
-		}
+    h3 {
+      text-align: left;
+    }
 
-		p {
-			overflow: hidden;
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
-		}
+    p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
 
-		.sub-section {
-			@include mixins.flex-center;
-			margin-top: 0.2rem;
-			width: 100%;
-			justify-content: space-between;
+    .sub-section {
+      @include mixins.flex-center;
+      margin-top: 0.2rem;
+      width: 100%;
+      justify-content: space-between;
 
-			.author-name {
-				color: vars.$color-text-med;
-			}
+      .author-name {
+        color: vars.$color-text-med;
+      }
 
-			.fake-button {
-				text-decoration: underline;
-				color: vars.$color-text-low;
-			}
-		}
-	}
+      .fake-button {
+        text-decoration: underline;
+        color: vars.$color-text-low;
+      }
+    }
+  }
 }
 
 .dialog-overlay {
-	position: fixed;
-	inset: 0;
-	background-color: rgba(0, 0, 0, 0.4);
-	backdrop-filter: blur(10px);
-	animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dialog-content {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90vw;
-	max-width: 500px;
-	max-height: 85vh;
-	animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 500px;
+  max-height: 85vh;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .book-card-content {
-	@include mixins.flex-center;
-	gap: 1rem;
-	flex-direction: column;
-	background-color: vars.$color-bg-surface;
-	padding: 1rem;
-	border-radius: vars.$radius-lg;
-	border: 1px solid vars.$color-border;
+  @include mixins.flex-center;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: vars.$color-bg-surface;
+  padding: 1rem;
+  border-radius: vars.$radius-lg;
+  border: 1px solid vars.$color-border;
 
-	h2 {
-		font-size: 1.5rem;
-	}
+  h2 {
+    font-size: 1.5rem;
+  }
 
-	img {
-		max-height: 15rem;
-	}
+  img {
+    max-height: 15rem;
+  }
 
-	.author-name {
-		color: vars.$color-text-low;
-		font-style: italic;
-	}
+  .author-name {
+    color: vars.$color-text-low;
+    font-style: italic;
+  }
 
-	.dialog-close {
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-	}
+  .dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 }
