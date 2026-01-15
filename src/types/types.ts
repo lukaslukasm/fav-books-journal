@@ -6,4 +6,8 @@ type Book = {
 	description?: string;
 };
 
-export { type Book };
+type BookCardProps = {
+	book: Book;
+};
+
+export { type Book, type BookCardProps };
