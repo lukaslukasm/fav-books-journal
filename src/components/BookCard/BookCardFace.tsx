@@ -9,7 +9,13 @@ export default function BookCardFace({ book }: BookCardProps) {
   return (
     <div className="book-card-face">
       <div className="img-wrap">
-        <img src={book.imagePath} alt={book.name + " cover"} />
+        <img
+          onError={(e) =>
+            (e.currentTarget.src = "./cover-images/placeholder-book.png")
+          }
+          src={book.imagePath}
+          alt={`${book.name} cover`}
+        />
       </div>
       <div className="content">
         <h3>{book.name}</h3>
