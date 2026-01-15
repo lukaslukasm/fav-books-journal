@@ -11,7 +11,7 @@ export default function getFakeBooks(n: number = 10): Book[] {
       author: faker.book.author(),
       name: faker.book.title(),
       description: faker.lorem.sentences({ min: 1, max: 3 }),
-      imagePath: "/random",
+      imagePath: faker.image.url({ width: 350, height: 500 }),
     };
 
     res.push(elm);
