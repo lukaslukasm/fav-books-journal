@@ -1,5 +1,10 @@
 import type { BookCardProps } from '@/src/types/types';
 
+/**
+ * Renders a card face showing a brief book info in horizontal layout.
+ *
+ */
+
 export default function BookCardFace({ book }: BookCardProps) {
 	return (
 		<div className='book-card-face'>

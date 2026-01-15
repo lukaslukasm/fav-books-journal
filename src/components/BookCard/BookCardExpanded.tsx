@@ -8,6 +8,22 @@ type BookCardExpandedProps = {
 	DescriptionComponent?: ElementType;
 };
 
+/**
+ *
+ * Renders a component displaying full book info. Main usage: Modal content within Radix Dialog component.
+ * @param TitleComponent - Book title component (defaults to h2).
+ * @param DescriptionComponent - Book description component (defaults to p).
+ * @param closeButton - Slot for a close action.
+ *
+ * @example
+ * <BookCardExpanded
+ *  book={book}
+ *  TitleComponent={Dialog.Title}
+ *  DescriptionComponent={Dialog.Description}
+ *  closeButton={<Dialog.Close>X</Dialog.Close>}
+ * />
+ */
+
 export default function BookCardExpanded({
 	book,
 	closeButton,
