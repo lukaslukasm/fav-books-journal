@@ -12,7 +12,7 @@
 
 *:focus-visible {
   outline-offset: 4px;
-  border-radius: vars.$radius-md;
+  border-radius: vars.$radius-sm;
   outline: 2px solid vars.$color-primary;
 }
 
@@ -71,6 +71,13 @@ body {
     border: 1px solid vars.$color-border;
     flex-wrap: wrap;
     background-color: vars.$color-bg-surface;
+
+    section {
+      @include mixins.flex-center;
+      flex-direction: column;
+      flex-grow: 1;
+      max-width: min(32rem, 100%);
+    }
   }
 }
 
