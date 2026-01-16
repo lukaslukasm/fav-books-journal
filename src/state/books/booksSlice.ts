@@ -2,6 +2,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { type Book } from "@/src/types/types";
 import getFakeBooks from "@/src/utils/getFakeBooks";
 import type { RootState } from "../store";
+import { nanoid } from "nanoid";
 
 const booksSlice = createSlice({
   name: "books",
@@ -10,8 +11,8 @@ const booksSlice = createSlice({
     titleFilterQuery: "",
   },
   reducers: {
-    addBook: (state, action: PayloadAction<Book>) => {
-      state.items.unshift(action.payload);
+    addBook: (state, action: PayloadAction<Omit<Book, "id">>) => {
+      state.items.unshift({ id: nanoid(), ...action.payload });
     },
     setTitleFilterQuery: (state, action: PayloadAction<string>) => {
       state.titleFilterQuery = action.payload;
