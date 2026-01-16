@@ -40,8 +40,10 @@ export default function BookCardExpanded({
         alt={`${book.name} cover`}
       />
       <TitleComponent>{book.name}</TitleComponent>
-      <span className="author-name">by {book.author}</span>
-      <DescriptionComponent>{book.description}</DescriptionComponent>
+      <span className="author-name">by {book.author ?? "unknown author"}</span>
+      <DescriptionComponent>
+        {book.description ?? "Description not provided."}
+      </DescriptionComponent>
       {closeButton}
     </div>
   );

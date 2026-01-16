@@ -19,9 +19,9 @@ export default function BookCardFace({ book }: BookCardProps) {
       </div>
       <div className="content">
         <h3>{book.name}</h3>
-        <p>{book.description}</p>
+        <p>{book.description ?? "Description not provided."}</p>
         <div className="sub-section">
-          <span className="author-name">{book.author}</span>
+          <span className="author-name">{book.author ?? "Unknown author"}</span>
           <span className="fake-button">Read More</span>
         </div>
       </div>
