@@ -33,15 +33,23 @@ export default function BookCardExpanded({
   return (
     <div className="book-card-content">
       <img
-        src={book.imagePath}
+        src={
+          book.imagePath
+            ? book.imagePath
+            : "./cover-images/placeholder-book.png"
+        }
         onError={(e) =>
           (e.currentTarget.src = "./cover-images/placeholder-book.png")
         }
         alt={`${book.name} cover`}
       />
       <TitleComponent>{book.name}</TitleComponent>
-      <span className="author-name">by {book.author}</span>
-      <DescriptionComponent>{book.description}</DescriptionComponent>
+      <span className="author-name">
+        by {book.author ? book.author : "unknown author"}
+      </span>
+      <DescriptionComponent>
+        {book.description ? book.description : "Description not provided."}
+      </DescriptionComponent>
       {closeButton}
     </div>
   );

@@ -59,7 +59,7 @@ export default function BookList() {
           <span className="result-info">
             {" "}
             {books.length
-              ? `Showing ${books.length} books`
+              ? `Showing ${books.length} book${books.length > 1 ? "s" : ""}`
               : "There is no book matching this title"}
           </span>
         </div>

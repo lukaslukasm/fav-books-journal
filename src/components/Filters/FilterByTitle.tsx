@@ -1,5 +1,4 @@
 import { useState, useTransition } from "react";
-import "./style.scss";
 import { setTitleFilterQuery } from "@/src/state/books/booksSlice";
 import { useDispatch } from "react-redux";
 
@@ -24,7 +23,7 @@ export default function FilterByTitle() {
   };
 
   return (
-    <div className="filter-by-title">
+    <div className="text-input-wrapper">
       <label htmlFor="FilterByTitle">Filter by title:</label>
       <input
         type="text"
