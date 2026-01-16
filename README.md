@@ -45,8 +45,6 @@ and adding new books to the list.
   books.
 - **The List of books needs to handle unlimited number of books.** Solution:
   - virtualizing the list of books
-  - scroll to top button on mobile devices to reach the filter comfortably
-    from any point of scroll
   - double buffering + `useTransition()` to make the filter feel snapy and filtering performant
   - fine-tuned book card appearance on the mobile to show a greater number of
     books per viewport
