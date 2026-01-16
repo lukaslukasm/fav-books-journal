@@ -84,15 +84,6 @@ body {
       max-width: min(32rem, 100%);
     }
   }
-
-  .books-list-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid vars.$color-border;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
 }
 
 .btn {

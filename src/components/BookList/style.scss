@@ -1,7 +1,7 @@
 @use "@/src/styles/mixins" as mixins;
 @use "@/src/styles/variables" as vars;
 
-.book-list {
+.book-container {
   @include mixins.flex-center;
   flex-wrap: wrap;
   width: 100%;
@@ -17,5 +17,16 @@
     width: 100%;
     color: vars.$color-text-low;
     font-style: italic;
+  }
+}
+
+.book-list {
+  .books-list-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid vars.$color-border;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
