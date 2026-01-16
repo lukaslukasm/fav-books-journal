@@ -29,6 +29,10 @@ h4 {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 h3 {
   font-size: 1.2rem;
 }
@@ -84,36 +88,66 @@ body {
 .btn {
   width: min-content;
   white-space: nowrap;
+  cursor: pointer;
   padding: 0.5rem 1rem;
-  border: 1px solid white;
   border-radius: vars.$radius-sm;
-}
 
-.btn.secondary {
-  background-color: vars.$color-secondary-bg;
-  color: vars.$color-secondary-text;
-  border: vars.$color-secondary-border;
+  &.secondary {
+    background-color: vars.$color-secondary-bg;
+    color: vars.$color-secondary-text;
+    border: vars.$color-secondary-border;
 
-  &:hover {
-    background-color: vars.$color-secondary-hover;
+    &:hover {
+      background-color: vars.$color-secondary-hover;
+    }
+  }
+
+  &.primary {
+    background-color: vars.$color-primary;
+    color: vars.$color-text-high;
+
+    &:hover {
+      background-color: vars.$color-primary-hover;
+    }
   }
 }
 
 .text-input-wrapper {
   display: flex;
   gap: 0.5rem;
+  position: relative;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: 1.3rem;
 
-  input {
+  input,
+  textarea {
     padding: 0.25rem 0.5rem;
     border-radius: vars.$radius-sm;
-    border: 1px solid vars.$color-border;
+    border: 2px solid vars.$color-border;
     background-color: vars.$color-bg-input;
     max-width: 20rem;
   }
 
   label {
     color: vars.$color-text-med;
+    min-width: 6rem;
+  }
+
+  .field-info {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    * {
+      font-size: 0.8rem;
+      color: vars.$color-error;
+      font-style: italic;
+    }
+  }
+
+  &.error input {
+    border-color: vars.$color-error;
   }
 }
