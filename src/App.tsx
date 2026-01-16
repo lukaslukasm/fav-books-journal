@@ -14,7 +14,10 @@ function App() {
             <AddBookForm />
           </section>
           <section>
-            <Filters />
+            <div className="books-list-header">
+              <h2>Books</h2>
+              <Filters />
+            </div>
             <BookList />
           </section>
         </div>
