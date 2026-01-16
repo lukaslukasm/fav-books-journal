@@ -98,3 +98,22 @@ body {
     background-color: vars.$color-secondary-hover;
   }
 }
+
+.text-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+
+  input {
+    padding: 0.25rem 0.5rem;
+    border-radius: vars.$radius-sm;
+    border: 1px solid vars.$color-border;
+    background-color: vars.$color-bg-input;
+    max-width: 20rem;
+  }
+
+  label {
+    color: vars.$color-text-med;
+  }
+}
