@@ -46,9 +46,7 @@ export default function BookContainer() {
                 key={vBook.key}
                 data-index={vBook.index}
                 ref={virtualizer.measureElement}
-                style={{
-                  margin: "1rem 0",
-                }}
+                className="book-card-wrap"
               >
                 <BookCard
                   book={books[vBook.index]}
