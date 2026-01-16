@@ -30,3 +30,10 @@
     gap: 1rem;
   }
 }
+
+@media (max-width: vars.$xs) {
+  .book-container {
+    padding: 0rem;
+    height: 90svh;
+  }
+}

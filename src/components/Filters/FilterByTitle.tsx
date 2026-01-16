@@ -23,7 +23,7 @@ export default function FilterByTitle() {
   };
 
   return (
-    <div className="text-input-wrapper">
+    <div className="text-input-wrapper" style={{ paddingBottom: "0.5rem" }}>
       <label htmlFor="FilterByTitle">Filter by title:</label>
       <input
         type="text"
