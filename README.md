@@ -63,3 +63,7 @@ and adding new books to the list.
     agnostic.
 
 - **Fully coupled Filter by Title**. The inputs by themselves are hard to abstract with preserving a11y, + considering how small and simple this filter is, there is not much value to be abstracted out. If we wanted to add a filter by author name, I think it would be easier to just copy the filter and adjust all the specifics.
+
+- **Coupled to data, decoupled from method.** There is not a lot of method-specific data that would make abstracting out the `BookForm` from the `AddBookForm` expensive, which allows for a simple prep for a potentional update book form.
+
+- **Tanstack Form**. Some might say it's an overkill for this project. Trust me, I have deeply regreted every time I haven't used that library. Granular errors handling, ability to use your own inputs, async field validation, and all other possibilities make this library the most flexible form library I've ever used and a complete must if maintainability is a priority.
