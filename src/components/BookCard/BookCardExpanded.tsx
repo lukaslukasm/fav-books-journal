@@ -33,7 +33,7 @@ export default function BookCardExpanded({
   return (
     <div className="book-card-content">
       <img
-        src={book.imagePath}
+        src={book.imagePath ?? "./cover-images/placeholder-book.png"}
         onError={(e) =>
           (e.currentTarget.src = "./cover-images/placeholder-book.png")
         }

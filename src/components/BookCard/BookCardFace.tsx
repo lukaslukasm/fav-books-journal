@@ -13,7 +13,7 @@ export default function BookCardFace({ book }: BookCardProps) {
           onError={(e) =>
             (e.currentTarget.src = "./cover-images/placeholder-book.png")
           }
-          src={book.imagePath}
+          src={book.imagePath ?? "./cover-images/placeholder-book.png"}
           alt={`${book.name} cover`}
         />
       </div>
