@@ -1,0 +1,11 @@
+@use "@/src/styles/mixins" as mixins;
+@use "@/src/styles/variables" as vars;
+
+.filter-by-title input {
+  margin-left: 0.5rem;
+  padding: 0.25rem;
+  border-radius: vars.$radius-sm;
+  border: 1px solid vars.$color-border;
+  background-color: vars.$color-bg-input;
+  max-width: 20rem;
+}
