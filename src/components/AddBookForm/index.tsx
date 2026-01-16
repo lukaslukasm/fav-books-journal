@@ -8,7 +8,7 @@ export default function AddBook() {
 
   return (
     <div className="add-book-form">
-      <h2>Add Book</h2>
+      <h2>Add a Book</h2>
       <BookForm onSubmit={(data) => dispatch(addBook(data))} />
     </div>
   );

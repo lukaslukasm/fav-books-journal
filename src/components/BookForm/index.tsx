@@ -117,6 +117,7 @@ export default function BookForm({ initialState, onSubmit }: BookFormProps) {
                   <label htmlFor={field.name}>Cover Image:</label>
                   <input
                     type="file"
+                    style={{ width: "100%" }}
                     accept="image/*"
                     id={field.name}
                     name={field.name}

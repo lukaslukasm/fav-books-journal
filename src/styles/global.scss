@@ -69,6 +69,7 @@ body {
 
   .main-container {
     @include mixins.flex-center;
+    align-items: start;
     padding: 1rem;
     width: min(64rem, calc(100% - 1rem));
     border-radius: vars.$radius-lg;
