@@ -1,5 +1,9 @@
 import type { AnyFieldApi } from "@tanstack/react-form";
 
+/**
+ * Renders an error message/messages if the field has some.
+ *
+ */
 export function FieldInfo({ field }: { field: AnyFieldApi }) {
   return (
     <span className="field-info">

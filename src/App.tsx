@@ -1,7 +1,6 @@
 import BookList from "./components/BookList";
 import { Provider } from "react-redux";
 import { store } from "./state/store";
-import Filters from "./components/Filters";
 import AddBookForm from "./components/AddBookForm";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
             <AddBookForm />
           </section>
           <section>
-            <Filters />
             <BookList />
           </section>
         </div>

@@ -33,6 +33,9 @@ and adding new books to the list.
 - Redux
 - Sass
 - Radix
+- Tanstack Virtual
+- Tanstack Form
+- Faker.js
 - ~~Material UI~~
 
 ## Pinned Decisions
@@ -42,8 +45,6 @@ and adding new books to the list.
   books.
 - **The List of books needs to handle unlimited number of books.** Solution:
   - virtualizing the list of books
-  - scroll to top button on mobile devices to reach the filter comfortably
-    from any point of scroll
   - double buffering + `useTransition()` to make the filter feel snapy and filtering performant
   - fine-tuned book card appearance on the mobile to show a greater number of
     books per viewport
@@ -67,3 +68,5 @@ and adding new books to the list.
 - **Coupled to data, decoupled from method.** There is not a lot of method-specific data that would make abstracting out the `BookForm` from the `AddBookForm` expensive, which allows for a simple prep for a potentional update book form.
 
 - **Tanstack Form**. Some might say it's an overkill for this project. Trust me, I have deeply regreted every time I haven't used that library. Granular errors handling, ability to use your own inputs, async field validation, and all other possibilities make this library the most flexible form library I've ever used and a complete must if maintainability is a priority.
+
+- **Let it wrap when it wants to**. I prefer using `flex-wrap` on a parent elm with `min-with` on children. This way the elements will stack on each other when the design decides to, without a need from the developer to define it.
