@@ -30,7 +30,7 @@ export default function BookCardFace({ book }: BookCardProps) {
           <span className="author-name">
             {book.author ? book.author : "Unknown author"}
           </span>
-          <span className="fake-button">Read More</span>
+          <span className="underline-button">Read More</span>
         </div>
       </div>
     </div>

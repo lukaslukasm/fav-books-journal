@@ -34,6 +34,11 @@ export default function FilterByTitle() {
         value={query}
         onChange={handleSearchChange}
       />
+      {!!query.length && (
+        <button className="underline-button" onClick={() => setQuery("")}>
+          clear
+        </button>
+      )}
     </div>
   );
 }
