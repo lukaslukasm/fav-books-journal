@@ -8,6 +8,11 @@ type BookFormProps = {
   onSubmit: (data: Omit<Book, "id">) => void;
 };
 
+/**
+ * Method-agnostic Book Form. Does not include any title or description.
+ *
+ */
+
 export default function BookForm({ initialState, onSubmit }: BookFormProps) {
   const form = useForm({
     defaultValues: (initialState as Omit<Book, "id">) ?? {
@@ -108,6 +113,7 @@ export default function BookForm({ initialState, onSubmit }: BookFormProps) {
             }}
           />
         </div>
+        {/* Enhancement: Add preview of uploaded image.*/}
         <div>
           <form.Field
             name="imagePath"
