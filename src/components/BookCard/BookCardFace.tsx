@@ -13,15 +13,23 @@ export default function BookCardFace({ book }: BookCardProps) {
           onError={(e) =>
             (e.currentTarget.src = "./cover-images/placeholder-book.png")
           }
-          src={book.imagePath ?? "./cover-images/placeholder-book.png"}
+          src={
+            book.imagePath
+              ? book.imagePath
+              : "./cover-images/placeholder-book.png"
+          }
           alt={`${book.name} cover`}
         />
       </div>
       <div className="content">
         <h3>{book.name}</h3>
-        <p>{book.description ?? "Description not provided."}</p>
+        <p>
+          {book.description ? book.description : "Description not provided."}
+        </p>
         <div className="sub-section">
-          <span className="author-name">{book.author ?? "Unknown author"}</span>
+          <span className="author-name">
+            {book.author ? book.author : "Unknown author"}
+          </span>
           <span className="fake-button">Read More</span>
         </div>
       </div>
